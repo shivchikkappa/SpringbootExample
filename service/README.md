@@ -33,3 +33,12 @@ IBM MQ 9.2.0.0
 7. The validation runs through the whole request payalod before returning the response rather than failing and returning at first validation error.
 8. Incoming request filter and request context concept is implemented to associate a uniqueID to every request, log the uniqueID in server logs and return the value as reference value in the response.
 
+# Build the application docker image
+
+1. Clone the repo from github
+
+2. mvn clean install
+    
+3. Build the image using below command
+
+    docker build . -t springbootibmmq
