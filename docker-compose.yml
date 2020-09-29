@@ -1,0 +1,39 @@
+version: '2'
+services:
+    config-service:
+        container_name: springbootibmmqservice
+        image: springbootibmmq:latest
+        ports:
+            - 8080:9080
+            - 8085:9085
+        depends_on:
+           - config-ibmmq
+        environment:
+          SPRING_APPLICATION_NAME: Service-API-IBMMQ
+          IBM_MQ_CONNNAME: ibmcommq(1414)
+        networks:
+            - spring-admin-network
+    config-admin:
+        container_name: springbootadmin
+        image: myspringbootadmin:latest
+        ports:
+            - 9060:9060
+            - 9065:9065
+        networks:
+            - spring-admin-network
+    config-ibmmq:
+      container_name: ibmcommq
+      image: ibmcom/mq:latest
+      environment:
+        LICENSE: accept
+        MQ_QMGR_NAME: QM1
+        MQ_APP_PASSWORD: passw0rd
+      ports:
+        - 1414:1414
+        - 9443:9443
+      networks:
+        - spring-admin-network
+networks:
+    spring-admin-network:
+        driver: bridge
+
