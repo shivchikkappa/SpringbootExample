@@ -1,4 +1,4 @@
-# SpringbootExample
+# Springboot IBM MQ Example
 This tutorial will walk you through the process of creating springboot microservices with below features
 
 1. Springboot sample application
