@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.Validator;
@@ -26,6 +27,7 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 @Service("IbmMqService")
+@Transactional
 public class IbmMqServiceImpl implements IbmMqService {
 
     private static final Logger log = LoggerFactory.getLogger(IbmMqServiceImpl.class);
@@ -87,6 +89,7 @@ public class IbmMqServiceImpl implements IbmMqService {
 
             //Post the message to queue
             String hostName = getHostName();
+            jmsTemplate.setSessionTransacted(true);
             if (!validReqList.isEmpty()) {
                 for (Request req : validReqList) {
                     req.setUniqueId(RequestContext.getTrackingId());

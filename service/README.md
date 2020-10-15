@@ -24,12 +24,14 @@ IBM MQ 9.2.0.0
 
 # Springboot application implementation details
 
-1. @JsonIgnore annotation to hide the JSON request fields expose to API integration clients
-2. @XML* annotation to convert JSON object to XML to post message as XML to IBM MQ.
-3. useDefaultResponseMessages(false) on SwaggerConfig to hide the default response in swagger API documentation.
-4. apis(RequestHandlerSelectors.basePackage("com.springboot.ibmmq")) to hide "Basic error controller" from API documentatio.
-5. Validations at field level to check for required value and against configured values. Refer to "validation" package and interface name annotation in Request.java.
-6. Validation on request object is enabled at resource layer using "@Valid" annotation. 
-7. The validation runs through the whole request payalod before returning the response rather than failing and returning at first validation error.
-8. Incoming request filter and request context concept is implemented to associate a uniqueID to every request, log the uniqueID in server logs and return the value as reference value in the response.
-
+1. Jms Message converter to convert JSON message to XML before posting the message to Queue. @XML* annotation to convert JSON object to XML to post message as XML to IBM MQ.
+2. Jms Transcation Management to have the best performane of posting the message to Queue.
+3. @JsonIgnore annotation to hide the JSON request fields expose to API integration clients
+4. useDefaultResponseMessages(false) on SwaggerConfig to hide the default response in swagger API documentation.
+5. apis(RequestHandlerSelectors.basePackage("com.springboot.ibmmq")) to hide "Basic error controller" from API documentatio.
+6. Validations at field level to check for required value and against configured values. Refer to "validation" package and interface name annotation in Request.java.
+7. Validation on request object is enabled at resource layer using "@Valid" annotation. 
+8. The validation runs through the whole request payalod before returning the response rather than failing and returning at first validation error.
+9. Incoming request filter and request context concept is implemented to associate a uniqueID to every request, log the uniqueID in server logs and return the value as reference value in the response.
+10. Exception handlers for BadRequest and InternalError including JSON Deserialization error.
+11. Log management using logback-spring.xml file.
