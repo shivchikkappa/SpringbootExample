@@ -7,6 +7,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.request.ServletWebRequest;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
@@ -61,5 +63,15 @@ public class BadRequestExceptionHandler extends ResponseEntityExceptionHandler {
             // if the error is not JsonMappingException, keep the original handler
             return super.handleHttpMessageNotReadable(ex, headers, status, request);
         }
+    }
+
+    @ExceptionHandler(BadRequestException.class)
+    @ResponseBody
+    public ResponseEntity<ErrorResponse> handleBadRequestException(BadRequestException ex, ServletWebRequest request) {
+        String errMsg = ex.getMessage();
+        String path = request.getRequest().getRequestURI().toString();
+
+        ErrorResponse ce = new ErrorResponse(HttpStatus.BAD_REQUEST, errMsg, path);
+        return new ResponseEntity<ErrorResponse>(ce, HttpStatus.BAD_REQUEST);
     }
 }

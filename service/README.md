@@ -35,6 +35,7 @@ IBM MQ 9.2.0.0
 9. Incoming request filter and request context concept is implemented to associate a uniqueID to every request, log the uniqueID in server logs and return the value as reference value in the response.
 10. Exception handlers for BadRequest and InternalError including JSON Deserialization error.
 11. Log management using logback-spring.xml file.
+12. Added filter to check the payload size and thrown HTTP 400 error
 
 # Build the application docker image
 
