@@ -1,0 +1,58 @@
+INFO  [2020-10-23 19:41:27,109] [] INFO c.s.i.SpringbootIbmmqApplicationTests@logStarting:55 - Starting SpringbootIbmmqApplicationTests on Shivakumars-MBP.attlocal.net with PID 4765 (started by shivc in /Users/shivc/github/SpringbootIBMMQ/service)
+INFO  [2020-10-23 19:41:27,111] [] INFO c.s.i.SpringbootIbmmqApplicationTests@logStartupProfileInfo:651 - No active profile set, falling back to default profiles: default
+INFO  [2020-10-23 19:41:29,235] [] INFO s.d.s.w.PropertySourcedRequestMappingHandlerMapping@initHandlerMethods:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+INFO  [2020-10-23 19:41:29,379] [] INFO o.s.s.c.ThreadPoolTaskExecutor@initialize:181 - Initializing ExecutorService 'applicationTaskExecutor'
+INFO  [2020-10-23 19:41:29,677] [] INFO o.s.s.c.ThreadPoolTaskScheduler@initialize:181 - Initializing ExecutorService
+INFO  [2020-10-23 19:41:29,754] [] INFO s.d.s.w.p.DocumentationPluginsBootstrapper@start:160 - Context refreshed
+INFO  [2020-10-23 19:41:29,767] [] INFO s.d.s.w.p.DocumentationPluginsBootstrapper@start:163 - Found 1 custom documentation plugin(s)
+INFO  [2020-10-23 19:41:29,783] [] INFO s.d.s.w.s.ApiListingReferenceScanner@scan:41 - Scanning for api listing references
+INFO  [2020-10-23 19:41:29,909] [] INFO c.s.i.SpringbootIbmmqApplicationTests@logStarted:61 - Started SpringbootIbmmqApplicationTests in 3.047 seconds (JVM running for 3.629)
+ERROR [2020-10-23 19:41:29,927] [] ERROR o.s.s.s.TaskUtils$LoggingErrorHandler@handleError:95 - Unexpected error occurred in scheduled task
+java.lang.IllegalStateException: couldn't determine local port. Please set spring.boot.admin.client.instance.service-base-url.
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getLocalServerPort(DefaultApplicationFactory.java:189)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getServiceBaseUrl(DefaultApplicationFactory.java:104)
+	at de.codecentric.boot.admin.client.registration.ServletApplicationFactory.getServiceUrl(ServletApplicationFactory.java:62)
+	at de.codecentric.boot.admin.client.registration.ServletApplicationFactory.getManagementBaseUrl(ServletApplicationFactory.java:77)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getHealthUrl(DefaultApplicationFactory.java:150)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.createApplication(DefaultApplicationFactory.java:75)
+	at de.codecentric.boot.admin.client.registration.ApplicationRegistrator.createApplication(ApplicationRegistrator.java:154)
+	at de.codecentric.boot.admin.client.registration.ApplicationRegistrator.register(ApplicationRegistrator.java:71)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+INFO  [2020-10-23 19:41:30,203] [] INFO o.s.s.c.ThreadPoolTaskScheduler@shutdown:218 - Shutting down ExecutorService
+INFO  [2020-10-23 19:41:30,203] [] INFO o.s.s.c.ThreadPoolTaskExecutor@shutdown:218 - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  [2020-10-23 19:42:15,022] [] INFO c.s.ibmmq.SpringbootIbmmqApplication@logStarting:55 - Starting SpringbootIbmmqApplication v0.0.1-SNAPSHOT on Shivakumars-MBP.attlocal.net with PID 4802 (/Users/shivc/github/SpringbootIBMMQ/service/target/SpringbootIBMMQ-0.0.1-SNAPSHOT.jar started by shivc in /Users/shivc/github/SpringbootIBMMQ/service)
+INFO  [2020-10-23 19:42:15,024] [] INFO c.s.ibmmq.SpringbootIbmmqApplication@logStartupProfileInfo:651 - No active profile set, falling back to default profiles: default
+INFO  [2020-10-23 19:42:16,328] [] INFO o.s.b.w.e.tomcat.TomcatWebServer@initialize:92 - Tomcat initialized with port(s): 9080 (http)
+INFO  [2020-10-23 19:42:16,337] [] INFO o.a.coyote.http11.Http11NioProtocol@log:173 - Initializing ProtocolHandler ["http-nio-9080"]
+INFO  [2020-10-23 19:42:16,337] [] INFO o.a.catalina.core.StandardService@log:173 - Starting service [Tomcat]
+INFO  [2020-10-23 19:42:16,338] [] INFO o.a.catalina.core.StandardEngine@log:173 - Starting Servlet engine: [Apache Tomcat/9.0.31]
+INFO  [2020-10-23 19:42:16,385] [] INFO o.a.c.c.C.[Tomcat].[localhost].[/]@log:173 - Initializing Spring embedded WebApplicationContext
+INFO  [2020-10-23 19:42:16,385] [] INFO o.s.web.context.ContextLoader@prepareWebApplicationContext:284 - Root WebApplicationContext: initialization completed in 1329 ms
+INFO  [2020-10-23 19:42:17,149] [] INFO s.d.s.w.PropertySourcedRequestMappingHandlerMapping@initHandlerMethods:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+INFO  [2020-10-23 19:42:17,184] [] INFO o.s.s.c.ThreadPoolTaskExecutor@initialize:181 - Initializing ExecutorService 'applicationTaskExecutor'
+INFO  [2020-10-23 19:42:17,462] [] INFO o.s.s.c.ThreadPoolTaskScheduler@initialize:181 - Initializing ExecutorService
+INFO  [2020-10-23 19:42:17,505] [] INFO s.d.s.w.p.DocumentationPluginsBootstrapper@start:160 - Context refreshed
+INFO  [2020-10-23 19:42:17,525] [] INFO s.d.s.w.p.DocumentationPluginsBootstrapper@start:163 - Found 1 custom documentation plugin(s)
+INFO  [2020-10-23 19:42:17,555] [] INFO s.d.s.w.s.ApiListingReferenceScanner@scan:41 - Scanning for api listing references
+INFO  [2020-10-23 19:42:17,686] [] INFO o.a.coyote.http11.Http11NioProtocol@log:173 - Starting ProtocolHandler ["http-nio-9080"]
+INFO  [2020-10-23 19:42:17,715] [] INFO o.s.b.w.e.tomcat.TomcatWebServer@start:204 - Tomcat started on port(s): 9080 (http) with context path ''
+INFO  [2020-10-23 19:42:17,783] [] INFO o.s.b.w.e.tomcat.TomcatWebServer@initialize:92 - Tomcat initialized with port(s): 9085 (http)
+INFO  [2020-10-23 19:42:17,784] [] INFO o.a.coyote.http11.Http11NioProtocol@log:173 - Initializing ProtocolHandler ["http-nio-9085"]
+INFO  [2020-10-23 19:42:17,784] [] INFO o.a.catalina.core.StandardService@log:173 - Starting service [Tomcat]
+INFO  [2020-10-23 19:42:17,784] [] INFO o.a.catalina.core.StandardEngine@log:173 - Starting Servlet engine: [Apache Tomcat/9.0.31]
+INFO  [2020-10-23 19:42:17,789] [] INFO o.a.c.c.C.[Tomcat-1].[localhost].[/]@log:173 - Initializing Spring embedded WebApplicationContext
+INFO  [2020-10-23 19:42:17,789] [] INFO o.s.web.context.ContextLoader@prepareWebApplicationContext:284 - Root WebApplicationContext: initialization completed in 70 ms
+INFO  [2020-10-23 19:42:17,794] [] INFO o.s.b.a.e.w.ServletEndpointRegistrar@register:75 - Registered '/actuator/jolokia' to jolokia-actuator-endpoint
+INFO  [2020-10-23 19:42:17,800] [] INFO o.s.b.a.e.web.EndpointLinksResolver@<init>:58 - Exposing 14 endpoint(s) beneath base path '/actuator'
+INFO  [2020-10-23 19:42:17,839] [] INFO o.a.coyote.http11.Http11NioProtocol@log:173 - Starting ProtocolHandler ["http-nio-9085"]
+INFO  [2020-10-23 19:42:17,841] [] INFO o.s.b.w.e.tomcat.TomcatWebServer@start:204 - Tomcat started on port(s): 9085 (http) with context path ''
+INFO  [2020-10-23 19:42:17,844] [] INFO c.s.ibmmq.SpringbootIbmmqApplication@logStarted:61 - Started SpringbootIbmmqApplication in 3.184 seconds (JVM running for 3.499)
+WARN  [2020-10-23 19:42:18,397] [] WARN d.c.b.a.c.r.ApplicationRegistrator@register:115 - Failed to register application as Application(name=Springboot IBM MQ, managementUrl=http://shivakumars-mbp.attlocal.net:9085/actuator, healthUrl=http://shivakumars-mbp.attlocal.net:9085/actuator/health, serviceUrl=http://shivakumars-mbp.attlocal.net:9080/) at spring-boot-admin ([http://springbootadmin:9060/instances]): I/O error on POST request for "http://springbootadmin:9060/instances": Connection refused; nested exception is java.net.ConnectException: Connection refused. Further attempts are logged on DEBUG level
+INFO  [2020-10-23 19:42:20,145] [] INFO o.s.s.c.ThreadPoolTaskScheduler@shutdown:218 - Shutting down ExecutorService
+INFO  [2020-10-23 19:42:20,145] [] INFO o.s.s.c.ThreadPoolTaskExecutor@shutdown:218 - Shutting down ExecutorService 'applicationTaskExecutor'
